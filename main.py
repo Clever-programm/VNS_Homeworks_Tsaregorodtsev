@@ -1,6 +1,8 @@
 def main():
-    print("Hello world!")
+    dictionary = dict()
+    dictionary["one"] = 2
+    return dictionary["one"]
 
 
 if __name__ == "__main__":
-    main()
+    print(main())
