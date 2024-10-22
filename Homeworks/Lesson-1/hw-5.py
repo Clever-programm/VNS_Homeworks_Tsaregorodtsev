@@ -1,5 +1,21 @@
+import re
+import datetime as dt
+
+
 def process_logs(logs: list[str]) -> tuple[int, list[str], list[int], list[int], list[set[str]]]:
-    pass
+    count_blocks = 0
+    players = []
+    players_online = []
+    players_blocks = []
+    achievements = []
+    for log in logs:
+        day = re.findall(r"-\d\d ", log)[0][1:-1]
+        hour = re.findall(r' \d\d:', log)[0][1:-1]
+        minute = re.findall(r':\d\d:', log)[0][1:-1]
+        second = re.findall(r':\d\d\S', log)[0][1:-1]
+        player = re.findall(r'\d\d:', log)[0][1:-1]
+    return count_blocks, players, players_online, players_blocks, achievements
+
 
 
 print(process_logs([

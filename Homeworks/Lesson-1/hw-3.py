@@ -30,11 +30,3 @@ def generate(state: tuple[list, list, dict]) -> str:
             break
         sentence.append(random.choice(state[2][sentence[-1]]))
     return " ".join(sentence)
-
-
-print(generate(learn([
-   "the dog ran quickly through the park chasing after a ball",
-   "a ball rolled across the park as the kids quickly chased after it",
-   "they quickly ran after the ball which flew across the park",
-   "in the park the dog quickly grabbed the ball and ran off"
-])))
