@@ -4,6 +4,11 @@ def play(words: list[str]) -> list[int]:
     good_words = []
     errors = []
     for n, word in enumerate(words):
+
+        # ЦИТАТА ИЗ ЗАДАНИЯ:
+        # "Важно также отметить, что слова должны содержать только латинские буквы."
+        # Поэтому программа отлетает на первых 2-х тестах
+
         if len(word) != len(list(filter(lambda x: x in al, list(word)))):
             errors.append(n + 1)
             continue

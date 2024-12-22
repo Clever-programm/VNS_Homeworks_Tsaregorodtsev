@@ -447,7 +447,7 @@ weights = {
 
 @pytest.mark.parametrize(
     "input_dataset_path,expected_weights",
-    [("tests/llm_dataset.txt", weights)],
+    [("llm_dataset.txt", weights)],
 )
 def test_llm(input_dataset_path, expected_weights):
     with open(input_dataset_path) as f:
