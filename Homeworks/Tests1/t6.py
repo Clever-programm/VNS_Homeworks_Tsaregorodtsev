@@ -56,6 +56,6 @@ def test_serialize(input_data):
     os.remove("data.txt")
 
 
-@pytest.mark.parametrize("input_data_path,expected", [("tests/skufs_data.txt", data)])
+@pytest.mark.parametrize("input_data_path,expected", [("skufs_data.txt", data)])
 def test_dataset(input_data_path, expected):
     assert deserialize(input_data_path) == expected

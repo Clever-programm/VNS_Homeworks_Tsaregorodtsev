@@ -14,7 +14,7 @@ from Homeworks.Lesson1.hw5 import process_logs
     ),
     [
         (
-            "tests/minicraft_logs.txt",
+            "minecraft_logs.txt",
             41,
             ["Steve", "Alex", "Herobrine"],
             {"Steve": 1799, "Alex": 1365, "Herobrine": 1559},
